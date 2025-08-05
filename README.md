@@ -57,8 +57,8 @@ Backend API runs at: http://localhost:5000                                      
 # Clone the repository:
 
 ```bash
-git clone https://github.com/utkarsh9643/intern-portal.git
-cd intern-portal 
+git clone https://github.com/utu1234/intern-portal-task.git
+cd intern 
 ------------------------------------------------------------------------------------------------------------------------------------->                                                              
 
 
