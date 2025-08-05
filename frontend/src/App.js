@@ -10,17 +10,15 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [viewLeaderboard, setViewLeaderboard] = useState(false);
 
-  // When user logs in, fetch data
   useEffect(() => {
     if (!userName) return;
 
     setLoading(true);
 
     // Fetch intern data
-    fetch('http://localhost:5000/api/intern')
+    fetch('/api/intern')
       .then(res => res.json())
       .then(data => {
-        // Replace dummy name with logged in name for demo purpose
         setInternData({ ...data, name: userName });
         setLoading(false);
       })
@@ -30,11 +28,9 @@ function App() {
       });
 
     // Fetch leaderboard
-    fetch('http://localhost:5000/api/leaderboard')
+    fetch('/api/leaderboard')
       .then(res => res.json())
-      .then(data => {
-        setLeaders(data);
-      })
+      .then(data => setLeaders(data))
       .catch(err => console.error('Error fetching leaderboard:', err));
 
   }, [userName]);
